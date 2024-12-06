@@ -1,0 +1,4 @@
+input {
+    font-size: calc(10px + 2px);
+    min-height: 200px;
+}
