@@ -1,3 +1,4 @@
+import { TableCellProps } from "@mui/material/TableCell/TableCell"
 import { OperationEnum } from "./OperationEnum"
 import { SymbolEnum } from "./SymbolEnum"
 
@@ -9,23 +10,25 @@ export type Order = {
     description: string,
     status: string,
     noRef: string,
+    refNo: string,
     extRef: string
     margin: string,
     tel: string,
     userId: string,
     date: string,
     expDate: string,
-    qty: number,
-    filledQty: number,
-    price: number,
-    netAmt: number,
-    exchangeRate?: number,
-    osLimit: number,
+    qty: string,
+    filledQty: string,
+    price: string,
+    netAmt: string,
+    exchangeRate: string,
+    osLimit: string,
     operation: OperationEnum,
     symbol: SymbolEnum
 }
 
 export type TableColumn = {
     colName: string,
-    colValue: string
+    colValue: string,
+    style?: React.CSSProperties
 }

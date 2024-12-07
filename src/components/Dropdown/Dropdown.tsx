@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Dropdown.css'
+import { FormControl, MenuItem, Select, SelectChangeEvent } from '@mui/material';
 
 interface DropdownProps {
     label: string;
@@ -16,20 +17,27 @@ const Dropdown: React.FC<DropdownProps> = (props: DropdownProps) => {
     props.setData(selectedOption, props.fieldName);
   }, [selectedOption]);
   
-  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = (event: SelectChangeEvent) => {
     setSelectedOption(event.target.value);
   };
 
   return (
-    <div className='dropdown'>
-      <label className='field-name' htmlFor='dropdown'>{props.label}</label>
-      <select className='dropdown-selector' id='dropdown' value={selectedOption} onChange={handleChange}>
-        {props.options.map((option, index) => (
-          <option key={index} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
+    <div className='dropdown item-indent'>
+      <label>{props.label}</label>
+      <FormControl sx={{ m: 1, width: 170 }} size='small'>
+        <Select
+          labelId="dropdown-label"
+          id="dropdown"
+          value={selectedOption}
+          onChange={handleChange}
+        >
+          {props.options.map((option, index) => (
+            <MenuItem key={index} value={option}>
+              {option}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
     </div>
   );
 };

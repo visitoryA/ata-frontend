@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { dataSet } from "../../../constants/Dataset";
-import { orderTable } from "../../../constants/TableCol";
-import SearchField from "./SearchField/SearchField";
-import { Order } from "../../../types/type";
-import './TradeSearch.css';
-import ExpandableTable from "./ExpandableTable/ExpandableTable";
+import { dataSet } from "../../../../constants/Dataset";
+import { orderMobileTable } from "../../../../constants/TableCol";
+import { Order } from "../../../../types/type";
+import './TradeSearchMobile.css';
+import SearchFieldMobile from "./SearchFieldMobile/SearchFieldMobile";
+import OrderTable from "./OrderTable/OrderTable";
 
-const TradeSearch: React.FC = () => {
+const TradeSearchMobile: React.FC = () => {
     const [period, setPeriod] = useState<string>('');
     const [status, setStatus] = useState<string>('');
     const [startDate, setStartDate] = useState<string>('');
@@ -38,9 +38,10 @@ const TradeSearch: React.FC = () => {
         }
         setFilteredData(data);
     }
+
     return <div>
-        <SearchField setData={setSearchField} totalData={filteredData.length} filterData={filterData} />
-        <ExpandableTable columns={orderTable} data={filteredData} />
+        <SearchFieldMobile setData={setSearchField} totalData={filteredData.length} filterData={filterData} />
+        <OrderTable columns={orderMobileTable} data={filteredData} />
     </div>
 };
-export default TradeSearch;
+export default TradeSearchMobile;

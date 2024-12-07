@@ -1,17 +1,5 @@
-select {
-    background-color: white;
-    min-height: calc(fit-content + 10px);
-}
-
-option:hover {
-    background-color: aqua;
-}
-
-.field-name {
-    margin-right: 10px;
-}
-
-.dropdown-selector {
-    /* padding-right: 30px; */
-    margin-right: 30px;
+.dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

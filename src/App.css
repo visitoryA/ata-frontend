@@ -13,29 +13,7 @@
   color: #002e4d;
 }
 
-.button {
-  background-color: #0d6fc4;
-  color: white;
-  border: none;
-  border-radius: 25%;
-}
-.negative-button {
-  background-color: white;
-  color: #c6202d;
-  border: #c6202d 1px;
-  border-radius: 25%;
-}
-
 .table {
   min-width: fit-content;
   width: 100%;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

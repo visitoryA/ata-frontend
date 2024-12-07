@@ -1,0 +1,7 @@
+
+@import '../../../../constants/Colors.css';
+
+th {
+    color: var(--medium-blue-text) !important;
+    font-weight: bold !important;
+}

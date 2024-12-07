@@ -1,0 +1,25 @@
+
+@import '../../../../constants/Colors.css';
+
+.order-data {
+    font-weight: bold !important;
+}
+
+.sub-table {
+    background-color: var(--sub-table-bg);
+}
+.sub-table-header {
+    font-size: 1rem;
+    color: var(--light-blue-text) !important;
+}
+.sub-table-cell {
+    border-bottom: none !important;
+    width: 25%;
+    min-width: 170;
+}
+
+.static-warning {
+    background-color: var(--warning-bg);
+    padding: 15px;
+    font-size: 12px;
+}
